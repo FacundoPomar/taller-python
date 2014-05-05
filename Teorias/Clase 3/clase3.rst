@@ -38,7 +38,6 @@ Estructuras de Control (Repaso)
 **Finalización de los bucles:**
 
 En el for, es por agotamiento de la lista o estructura sobre la cual itera.
-
 En el While, es cuando su condición pasa a ser falsa.
 
 --------------------------------------------
@@ -149,9 +148,7 @@ Esto pasa con todos los tipos de datos vistos ? Probemos con Strings, Enteros, F
 Funciones
 =========
 
-Si paso como parámetro una lista y la modifico, el cambio si se verá reflejado en el programa principal. 
-
-**¿Cómo lo Evitamos?**
+Si paso como parámetro una lista y la modifico, el cambio si se verá reflejado en el programa principal. **¿Cómo lo Evitamos?**
 
 Como se había mencionado, *return* devuelve un solo valor. Si queremos que nuestra función devuelva más de un solo valor, tenemos que utilizar alguna estructura de datos.
 
