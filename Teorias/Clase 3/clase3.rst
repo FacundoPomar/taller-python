@@ -222,3 +222,75 @@ Es una mala práctica de programación utilizar variables globales en nuestros p
 **Funciones Dentro de Funciones**
 
 Es posible declarar funciones dentro de una función, y al igual que las variables, esta función será local a la función en donde es declarada.
+
+---------------------------------------
+
+:data-rotate: 180
+
+Módulos
+=======
+
+Los módulos son archivos con extención .py que contienen sentencias y funciones. Esto nos permite que no solo modularicemos un programa a través de funciones, si no que además modularicemos a nivel archivos las diferentes funcionalidades.
+
+Por ejemplo, podemos declarar todas las funciones en un archivo llamado funciones.py y en nuestro programa principal main.py utilizar esas funciones importándolas.
+
+Para ello, utilizaremos la sentenci import.
+
+.. code:: python
+
+	import
+	
+---------------------------------------
+
+:data-y: r2000
+
+Módulos
+=======
+
+Importando
+==========
+
+Ya sean módulos creados por nosotros mismos, o módulos creados por 3 (o propios del lenguaje de pramación), impotar nos permite extender la funcionalidad de nuestro programa.
+
+.. code:: python
+
+	#funciones.py
+	def Max(\*numeros):
+		#Devuelve el máximo entre todos los números pasados.
+		max = -9999
+			for num in numeros:
+				if (num > max):
+					max = num
+		return max
+	#main.py
+	import funciones
+	print(funciones.Max(2, 5, 2, 6, 2, 9, 99, 22, 465))
+	
+Notar que para llamar a la función, debemos de invocar antes del nombre del módulo (funciones). **¿Cómo hacemos para que Max() sea una función propia de main.py ?**
+
+---------------------------------------------
+
+:data-rotate: 45
+
+Módulos
+=======
+
+Importando
+==========
+
+.. code:: python
+
+	from funciones import Max
+	print(Max(2, 5, 32))
+	
+Y Si en funciones.py tenemos 100 funciones ? (uso del \*)
+
+.. code:: python
+
+	from funciones import *
+	
+**OJO**, cuando importamos todas las funciones de un módulo, podremos tener problemas si en ese módulo una función tiene el mismo nombre que una función dentro de nuestro archivos main.py (Uso de la función local por sobre la externa)
+
+Es por eso que para usar un * tenemos que estar seguros del contenido del módulo.
+
+Por una cuestión de optimización, solo importamos lo que necesitamos.
